@@ -6,7 +6,8 @@ f_stopwords <- url("https://raw.githubusercontent.com/stopwords-iso/stopwords-en
 stopwords <- readLines(f_stopwords, warn = FALSE)
 close(f_stopwords)
 
-f_text <- file("stdin")
+#f_text <- file("stdin")
+f_text <- file("alice.txt")
 lines <- tolower(readLines(f_text))
 
 words <- unlist(regmatches(lines, gregexpr("[a-z']{2,}", lines)))

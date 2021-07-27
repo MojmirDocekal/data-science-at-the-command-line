@@ -9,6 +9,8 @@ fizz_buzz <- function(n) {
 }
 
 f <- file("stdin")
+#f <- file("seq.txt")
+# f <- seq(1,30)
 open(f)
 while(length(n <- readLines(f, n = 1)) > 0) {
   write(fizz_buzz(n), stdout())
